@@ -1,0 +1,24 @@
+name: Create React App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-react-app:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Create React App
+        run: npx create-react-app my-react-app
+
+      - name: Push to Repository
+        uses: ad-m/github-push-action@master
+        with:
+          branch: main
+          directory: ./my-react-app
+          github_token: ${{ secrets.GITHUB_TOKEN }}
