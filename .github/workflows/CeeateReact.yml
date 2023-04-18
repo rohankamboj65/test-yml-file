@@ -3,7 +3,7 @@ name: Create React App
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   create-react-app:
@@ -19,6 +19,6 @@ jobs:
       - name: Push to Repository
         uses: ad-m/github-push-action@master
         with:
-          branch: main
+          branch: master
           directory: ./my-react-app
           github_token: ${{ secrets.GITHUB_TOKEN }}
