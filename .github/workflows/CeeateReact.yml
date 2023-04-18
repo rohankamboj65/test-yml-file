@@ -17,7 +17,7 @@ jobs:
         run: npx create-react-app my-react-app
 
       - name: Push to Repository
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@main
         with:
           branch: master
           directory: ./my-react-app
